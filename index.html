@@ -114,7 +114,7 @@
       List your most common features and other more rare uses of a car dashboards.
     </h3>
     <p>
-      Some of the standard features on car dashboards include the speedometer that helps limit or maintain the speed at which an individual is driving. Dashboards also have a tachometer that displays the rotations of the engine and shaft. It also has an odometer the measures the mileage of the vehicles. These are some of the contemporary features of the Dashboard. Other features include indicators to show something wrong with the vehicle, such as the ABS light indicator. They may also contain low tire pressure indicators, airbag failure indicators, among others. Some of the newer features include temperature control dials or buttons, a cup holder, ashtray, light control systems, and entertainment systems. Some of the rare features that are not found in all vehicles include a heads-up display, a navigation system, and an infotainment unit. 
+      Some of the standard features on car dashboards include the speedometer that helps limit or maintain the speed at which an individual is driving. Dashboards also have a tachometer that displays the rotations of the engine and shaft. It also has an odometer the measures the mileage of the vehicles. These are some of the contemporary features of the Dashboard. Other features include indicators to show something wrong with the vehicle, such as the ABS light indicator. They may also contain low tire pressure indicators, airbag failure indicators, among others. Some of the newer features include temperature control dials or buttons, a cup holder, ashtray, light control systems, and entertainment systems. Some of the rare features that are not found in all vehicles include a heads-up display, a navigation system, and an infotainment unit.
     </p>
   </li>
   <li>
@@ -142,8 +142,8 @@
     <p>
       I'm trying to make it all very compact and letting the user gather as much information as possible from a single glance. As everything can be viewed from a user can easily know the speed, and Fuel at the same time as they are more important.
       With added colors it is very easy to understand the fuel level of the car. All the warning signs also placed in a signle column which allows the user to get all the warning signs easily.
-      Trip information is also just below the speed. This dashboard was made for the cars in America, for this reason the MPH has not been shown which felt like uneccesaary information. 
-      All the calculations such as Distance, Trip, RPM, Speed all are measured in imperial units. 
+      Trip information is also just below the speed. This dashboard was made for the cars in America, for this reason the MPH has not been shown which felt like uneccesaary information.
+      All the calculations such as Distance, Trip, RPM, Speed all are measured in imperial units.
     </p>
   </li>
   <h2>
@@ -159,8 +159,21 @@
       when low:
       <li> <img src="./htmlData/fuel3.PNG", width=500></li>
       </ul>
-    
+
   </p>
+  <p>
+    <h4>
+      RPM, Speed, Distance calculations for my desgin
+    </h4>
+    <p>
+      reference for my calculations is Ford Mustang. Ihave researched the gear ratios Tire size to show the accurate RPM distance and speed for the Dashboard.
+    </p>
+  <p>  transmissionRatios = [3.35, 1.93, 1.29, 1.0, 0.68] # individual transmission ratios of each gear. Assuming the car has 5 gears excluding Reverse and Neutral</p>
+  <p>rearEndRatio = 3.15 #:1</p>
+  <p>tireSize = 29 # inches </p>
+  <p>RPM = speed * transmission Ratio of the gear * rear end ration * 336 / tire size</p>
+  <p>distance = ((PI * tireSize * totalTime * RPM)/(63360* 60000))</p>
+
 </body>
 
 </html>
