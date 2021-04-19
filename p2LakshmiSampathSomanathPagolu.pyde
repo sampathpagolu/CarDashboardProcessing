@@ -20,7 +20,7 @@ def draw():
     translate(0, 50)
     # print(mouseX, mouseY)
     dashboard()
-
+    saveFrame("./final/gif-########.png")
         
     
 
@@ -162,7 +162,7 @@ def fuel(distance):
         distance = 0
     elif distance % 3 == 0 :
         if fuel != 300:
-            fuel +=10
+            fuel +=100
         else: fuel = 300
     redFuel = 50
     greenFuel = 170
